@@ -4,7 +4,9 @@ package com.pns.bank.controller;
 
 import java.util.List;
 import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,7 +30,7 @@ public class CustomerlDetailController {
 	}
 
 	@PostMapping("/addDetails")
-	public CustomerDetails addDetails(@RequestBody CustomerDetails customerDetails) {
+	public CustomerDetails addDetails(@RequestBody CustomerDetails customerDetails)throws HttpMessageNotReadableException {
 		return p_d_ser.addCustomer(customerDetails);
 	}
 

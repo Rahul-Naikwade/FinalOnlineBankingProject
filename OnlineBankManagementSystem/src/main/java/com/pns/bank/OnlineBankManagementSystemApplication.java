@@ -21,8 +21,9 @@ public class OnlineBankManagementSystemApplication {
 		SpringApplication.run(OnlineBankManagementSystemApplication.class, args);
 	}
 
-	@EventListener(ApplicationReadyEvent.class)
-	public void sendEmail() {
-		emailService.sendEmail("nikhilpatare0707@gmail.com", "Hi I am Nikhil", "I have Send Mail");
-	}
+
+	  @EventListener(ApplicationReadyEvent.class) public void sendEmail() {
+	  emailService.sendEmail("nikhilpatare0707@gmail.com", "Hi I am Nikhil",
+	  "I have Send Mail"); }
+	 
 }

@@ -24,4 +24,5 @@ public class EmailConfig {
 		System.out.println("mail send Successfully");
 
 	}
+
 }

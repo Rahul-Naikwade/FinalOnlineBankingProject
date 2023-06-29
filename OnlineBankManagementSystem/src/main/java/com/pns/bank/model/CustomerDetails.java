@@ -34,7 +34,7 @@ public class CustomerDetails {
 	private int stateId;
 	private int districtId;
 	private int cityId;
-	
+
 	@CreationTimestamp
 	@Column(updatable = false)
 	private LocalDate created_at;
@@ -46,7 +46,28 @@ public class CustomerDetails {
 	private List<Address> address;
 
 	@OneToOne(cascade = CascadeType.ALL)
+
 	private Login login;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Account account;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Transction Transction;
+
+	public Transction getTransction() {
+		return Transction;
+	}
+
+	public void setTransction(Transction transction) {
+		Transction = transction;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
 
 	public Login getLogin() {
 		return login;
