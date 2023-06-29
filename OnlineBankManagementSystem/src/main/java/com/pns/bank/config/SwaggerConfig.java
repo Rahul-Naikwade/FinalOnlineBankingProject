@@ -13,7 +13,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket dockConfig() {
 		return new Docket(DocumentationType.SWAGGER_2).groupName("api")
-				.select().apis(RequestHandlerSelectors.basePackage("com.bank"))
+				.select().apis(RequestHandlerSelectors.basePackage("com.pns.bank"))
 				.paths(PathSelectors.any()).build();
 	}
 }
