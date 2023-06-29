@@ -1,5 +1,7 @@
 package com.pns.bank.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,12 @@ public class transctionServiceImpl implements TransctionServiceI {
 	public Transction getById(long transaction_Id) {
 		return tr.findById(transaction_Id);
 
+	}
+
+	@Override
+	public List<Transction> getAllTransction() {
+		List<Transction> tlist = tr.findAll();
+		return tlist;
 	}
 
 }
